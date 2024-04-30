@@ -6,12 +6,9 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:04:48 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/04/30 10:59:27 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/04/30 11:42:37 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
 
 #include <string>
 #include <iostream>
@@ -22,6 +19,7 @@ class ClapTrap
 		ClapTrap();
 		ClapTrap(ClapTrap const & src);
 		ClapTrap(std::string name);
+		ClapTrap::ClapTrap(std::string name, uint hit_points, uint energy_points, uint attack_damage);
 		~ClapTrap();
 
 		std::string		getName() const;
@@ -35,11 +33,9 @@ class ClapTrap
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 
-	private:
+	protected:
 		std::string _name;
 		unsigned int _hit_points;
 		unsigned int _energy_points;
 		unsigned int _attack_damage;
 };
-
-#endif
