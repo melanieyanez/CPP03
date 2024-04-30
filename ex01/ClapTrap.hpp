@@ -6,9 +6,12 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:04:48 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/04/30 19:58:55 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/04/30 21:24:20 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 #include <string>
 #include <iostream>
@@ -41,3 +44,5 @@ class ClapTrap
 		unsigned int _energy_points;
 		unsigned int _attack_damage;
 };
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:06:49 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/04/30 19:48:46 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/04/30 21:22:19 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@
 			std::cout << "ClapTrap " << this->_name << " failed to attack! It is out of energy." << std::endl;
 		printStats();
 	}
+	
 	void	ClapTrap::takeDamage(unsigned int amount){
 		if (this->_hit_points > amount)
 		{
