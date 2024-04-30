@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 10:55:05 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/04/30 21:02:22 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/04/30 20:07:04 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ ScavTrap::ScavTrap() : ClapTrap("Unknown", 100, 50, 20){
 	printStats();
 }
 
-ScavTrap::ScavTrap(ScavTrap const & src) : ClapTrap(src){
+ScavTrap::ScavTrap(ScavTrap const & src){
 	std::cout << "ScavTrap copy constructor called" << std::endl;
 	*this = src;
 	printStats();

@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 09:06:57 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/04/30 21:03:24 by melanieyane      ###   ########.fr       */
+/*   Created: 2024/04/30 20:27:39 by melanieyane       #+#    #+#             */
+/*   Updated: 2024/04/30 20:44:13 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-int main() {
-    ScavTrap caterpie;
-    ScavTrap jigglypuff("Jigglypuff");
-    ScavTrap rattata(jigglypuff);
-    
-    jigglypuff.attack("Meowth");
-    jigglypuff.takeDamage(30);
-    jigglypuff.beRepaired(10);
-    jigglypuff.attack("Meowth");
+#include "ClapTrap.hpp"
 
-    jigglypuff.guardGate();
+class FragTrap : public ClapTrap
+{
+	public:
+		FragTrap();
+		FragTrap(FragTrap const & src);
+		FragTrap(std::string name);
+		~FragTrap();
 
-    return 0;
-}
+		FragTrap& operator=(const FragTrap& rhs);
+	
+		void	highFivesGuys(void);
+		
+};
+
+#endif

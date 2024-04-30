@@ -6,7 +6,7 @@
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 09:04:48 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/04/30 10:59:27 by melanieyane      ###   ########.fr       */
+/*   Updated: 2024/04/30 19:36:33 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ class ClapTrap
 		void	attack(const std::string& target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
+
+		void printStats() const;
+
 
 	private:
 		std::string _name;

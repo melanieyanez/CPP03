@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melanieyanez <melanieyanez@student.42.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/30 09:06:57 by melanieyane       #+#    #+#             */
-/*   Updated: 2024/04/30 21:03:24 by melanieyane      ###   ########.fr       */
+/*   Created: 2024/04/30 10:54:56 by melanieyane       #+#    #+#             */
+/*   Updated: 2024/04/30 11:00:03 by melanieyane      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int main() {
-    ScavTrap caterpie;
-    ScavTrap jigglypuff("Jigglypuff");
-    ScavTrap rattata(jigglypuff);
-    
-    jigglypuff.attack("Meowth");
-    jigglypuff.takeDamage(30);
-    jigglypuff.beRepaired(10);
-    jigglypuff.attack("Meowth");
+#include "ClapTrap.hpp"
 
-    jigglypuff.guardGate();
+class ScavTrap : public ClapTrap
+{
+	public:
+		ScavTrap();
+		ScavTrap(ScavTrap const & src);
+		ScavTrap(std::string name);
+		~ScavTrap();
 
-    return 0;
-}
+		ScavTrap& operator=(const ScavTrap& rhs);
+	
+		void	attack(const std::string& target);
+		void 	guardGate();
+};
+
+#endif
